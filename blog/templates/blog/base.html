@@ -19,6 +19,9 @@
 <link href="{% static 'blog/dist/css/bootstrap.min.css'%}" rel="stylesheet">
 
     <style>
+      .blog-header {
+        background-image: url("{% static 'blog/images/headerback.png'%}");
+      } 
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -45,10 +48,10 @@
     <div class="container">
         <header class="blog-header py-1">
           <div class="row flex-nowrap justify-content-between align-items-center" >
-            <div class="col-4 pt-1">
+            <!-- <div class="col-4 pt-1">
               <a class="text-muted" href="#">Subscribe</a>
-            </div>
-            <div class="col-4 text-center">
+            </div> -->
+            <div class="col-6 text-center">
               <a class="blog-header-logo text-dark" href="{% url 'home' %}">Teia Jurídica<br></a>
               <h5>O blog de Lázaro Guimarães</h5>
             </div>
@@ -67,7 +70,7 @@
       <a class="p-2 text-muted nav-link disabled" href="#">Notícias</a>
       <a class="p-2 text-muted nav-link disabled" href="#">Ensino</a>
       <a class="p-2 text-muted nav-link disabled" href="#">Livros</a>
-      <a class="p-2 text-muted" href="{% url 'about' %}">Sobre Lázaro</a>
+      <a class="p-2 text-dark" href="{% url 'about' %}">Sobre Lázaro</a>
       <a class="p-2 text-muted" href="#">...</a>
       <!-- <a class="p-2 text-muted" href="#">Business</a>
       <a class="p-2 text-muted" href="#">Politics</a>
