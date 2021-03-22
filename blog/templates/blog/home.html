@@ -7,11 +7,19 @@
 
 {% block content %}
 
-<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+<style>
+  .bg-destaque {
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover;
+  }
+</style>
+{% for i in artigos %}
+{% if i.destaque %}
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-destaque" style="background-image: url('{{ i.imagem.url }}');">
     <div class="col-md-10 px-0">
       <!-- <img src="{% static 'blog/images/familiaguima.jpg'%}" alt="" width="400"> -->
-      {% for i in artigos %}
-      {% if i.destaque %}
+      
       <h1 class="display-4 font-italic">{{i.titulo}}</h1>
       
       <p class="lead my-3">
