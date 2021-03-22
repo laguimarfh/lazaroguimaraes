@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block page_title %}Artigos{% endblock %}
+
+{% block content %}
+<h2>Lista de Artigos</h2>
+<p></p>
+
+{% for artigo in artigos %}
+  {% include "blog/artigo_preview.html" %}
+{% endfor %}
+
+{% endblock %}

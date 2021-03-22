@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@y=622nooaqyqd%+ad7u1!&-(l^=$@v6wt#e8yt1-^@i@#zjx!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.lazaroguimaraes.com']
+ALLOWED_HOSTS = ['127.0.0.1','lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.lazaroguimaraes.com']
 
 
 # Application definition
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Recife'
 
 USE_I18N = True
 

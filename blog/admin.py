@@ -7,6 +7,7 @@ class ArtigoAdmin(admin.ModelAdmin):
     list_display = (
         'titulo',
         'imagem',
-        'texto',
         'submitted',
+        'destaque',
+        'author',
     )

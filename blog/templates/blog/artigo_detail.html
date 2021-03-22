@@ -1,0 +1,20 @@
+{# blog/templates/blog/artigo_detail.html #}
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+{% block page_title %}{{ artigo.titulo }}{% endblock %}
+
+{% block content %}
+
+{% if artigos.imagem %}
+<img src="{{ artigos.imagem.url }}" width="20%" alt="Banner image">
+{% endif %}
+
+  <h1>{{ artigos.titulo }}</h1>
+  <span class="published">Published <time>{{ artigos.submitted }}</time></span><br>
+  <span class="author">{{ artigos.author.get_full_name }}</span>
+
+  <section class="content">{{ artigos.texto|safe }}</section>
+
+{% endblock %}
