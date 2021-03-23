@@ -23,7 +23,7 @@
       <h1 class="display-4 font-italic">{{i.titulo}}</h1>
       
       <p class="lead my-3">
-        {{ i.texto|striptags|truncatewords:30 }}
+        {{ i.texto|truncatewords:30 }}
       </p>
       <p class="lead my-3"><a href="{{ i.get_absolute_url }}">Read more &rarr; </a></p>
 
