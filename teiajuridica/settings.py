@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@y=622nooaqyqd%+ad7u1!&-(l^=$@v6wt#e8yt1-^@i@#zjx!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.lazaroguimaraes.com']
+DEBUG = True
+ALLOWED_HOSTS = ['*','lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.lazaroguimaraes.com']
 
 
 # Application definition
@@ -141,4 +141,4 @@ MEDIA_LOCATION = "media"
 AZURE_ACCOUNT_NAME = "70032"
 AZURE_CUSTOM_DOMAIN = f'teiajuridicastorage.blob.core.windows.net'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
-DEFAULT_FILE_STORAGE = 'mysite.custom_azure_storage_backends.AzureMediaStorage'
+DEFAULT_FILE_STORAGE = 'teiajuridica.custom_azure_storage_backends.AzureMediaStorage'
