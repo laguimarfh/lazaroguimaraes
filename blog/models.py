@@ -45,7 +45,12 @@ class Artigo(models.Model):
     texto = RichTextUploadingField()
     submitted = models.DateTimeField(auto_now_add=True)
     destaque = models.BooleanField(null=True)
-    author = models.CharField(max_length=50)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,  # The Django auth user model
+        on_delete=models.PROTECT,  # Prevent posts from being deleted
+        related_name='blog_artigos',
+        null=True,
+    )
     status = models.CharField(
         max_length=10,
         choices=STATUS_CHOICES,
