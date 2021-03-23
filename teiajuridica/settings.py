@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap' 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+
+# Azure Config
+
+MEDIA_LOCATION = "media"
+AZURE_ACCOUNT_NAME = "70032"
+AZURE_CUSTOM_DOMAIN = f'teiajuridicastorage.blob.core.windows.net'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+DEFAULT_FILE_STORAGE = 'mysite.custom_azure_storage_backends.AzureMediaStorage'
