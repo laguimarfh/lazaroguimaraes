@@ -6,7 +6,7 @@
 <img src="{{ artigo.imagem.url }}" width="30%" alt="Banner image">
 {% endif %}
 <p>
-  {{ artigo.texto|striptags|truncatewords:20 }}
+  {{ artigo.texto|safe|truncatewords:20 }}
 </p>
-<p><a href="{{ artigo.get_absolute_url }}">Read more &rarr; </a></p>
+<p><a href="{{ artigo.get_absolute_url }}">Continue lendo &rarr; </a></p>
 

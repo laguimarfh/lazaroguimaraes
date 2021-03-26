@@ -25,7 +25,7 @@
       <p class="card-text mb-auto">
         {{ i.texto|safe|truncatewords:30 }}
       </p>
-      <p class="lead my-3"><a href="{{ i.get_absolute_url }}">Read more &rarr; </a></p>
+      <p class="lead my-3"><a href="{{ i.get_absolute_url }}">Continue lendo &rarr; </a></p>
 
       {% endif %}
       {% endfor%}<!-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p> -->
@@ -41,7 +41,7 @@
           <!-- <strong class="d-inline-block mb-2 text-primary">World</strong> -->
           <h3 class="mb-0">{{ i.titulo}}</h3>
           <div class="mb-1 text-muted">{{ i.submitted }}</div>
-          <p class="card-text mb-auto">{{ i.texto|striptags|truncatewords:20 }}</p>
+          <p class="card-text mb-auto">{{ i.texto|safe|truncatewords:20 }}</p>
           <a href="{{ i.get_absolute_url }}" class="stretched-link">Continue lendo</a>
         </div>
         <div class="col-auto d-none d-lg-block">
