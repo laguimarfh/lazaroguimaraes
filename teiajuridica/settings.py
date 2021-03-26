@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*','lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'storages',
+    'accounts',
 ]
 
 MIDDLEWARE = [
