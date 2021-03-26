@@ -5,6 +5,12 @@ from . import models
 
 # Create your views here.
 
+class HomeView2(TemplateView):
+    """
+    The blog home
+    """
+    template_name = 'blog/home2.html'
+
 
 class HomeView(TemplateView):
     """
