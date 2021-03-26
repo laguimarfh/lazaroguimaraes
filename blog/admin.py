@@ -10,4 +10,16 @@ class ArtigoAdmin(admin.ModelAdmin):
         'submitted',
         'destaque',
         'author',
+    )  
+    list_filter = (
+        'status',
+        'topicos',
     )
+
+@admin.register(models.Topico)
+class TopicAdmin(admin.ModelAdmin):
+    list_display = (
+        'topico',
+        'slug',
+    )
+    prepopulated_fields = {'slug': ('topico',)}

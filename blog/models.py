@@ -8,6 +8,8 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 
+
+
 class PostQuerySet(models.QuerySet):
     """
     Represents a queryset functions
@@ -22,6 +24,31 @@ class PostQuerySet(models.QuerySet):
     #     User = get_user_model()
     #     # Get the users who are authors of this queryset
     #     return User.objects.filter(blog_posts__in=self).distinct()
+
+class Topico(models.Model):
+    """
+    Represents um artigo do Tópico
+    """
+    topico = models.CharField(
+        max_length=50,
+        unique=True  # No duplicates!
+    )
+    slug = models.SlugField(unique=True)
+
+    def __str__(self):
+        return self.topico
+
+    class Meta:
+        ordering = ['topico']
+    
+    def get_absolute_url(self):
+        return reverse(
+            'topico-detail',  
+            kwargs = {
+            'slug': self.slug
+            }
+        )
+
 
 class Artigo(models.Model):
     DRAFT = 'draft'
@@ -57,7 +84,10 @@ class Artigo(models.Model):
         default=DRAFT,
         help_text='Set to "published" to make this post publicly visible',
     )
-
+    topicos = models.ManyToManyField(
+        Topico,
+        related_name='blog_artigotopico'
+    )
     objects = PostQuerySet.as_manager()
 
 
@@ -78,4 +108,6 @@ class Artigo(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
 
