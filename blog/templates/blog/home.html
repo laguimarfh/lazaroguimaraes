@@ -44,7 +44,7 @@
           <strong class="d-inline-block mb-2 text-primary">{{i.topico}}</strong>
           <h3 class="mb-1">{{i.titulo}}</h3>
           <div class="mb-1 text-muted">{{i.submitted}}</div>
-          <p class="card-text mb-auto">{{ i.texto|safe|truncatechars:100 }}</p>
+          <p class="card-text mb-auto">{{ i.texto|safe|truncatechars:200 }}</p>
           <a href="{{ i.get_absolute_url }}" class="stretched-link">Continue lendo</a>
         </div>
         <div class="col-auto d-none d-lg-block">
