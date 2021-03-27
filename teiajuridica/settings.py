@@ -144,3 +144,4 @@ AZURE_ACCOUNT_NAME = "70032"
 AZURE_CUSTOM_DOMAIN = f'teiajuridicastorage.blob.core.windows.net'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'teiajuridica.custom_azure_storage_backends.AzureMediaStorage'
+
