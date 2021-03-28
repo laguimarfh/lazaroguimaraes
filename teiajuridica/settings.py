@@ -26,25 +26,24 @@ SECRET_KEY = '@y=622nooaqyqd%+ad7u1!&-(l^=$@v6wt#e8yt1-^@i@#zjx!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*','lazaroguimaraes.herokuapp.com','lazaroguimaraes.com','www.lazaroguimaraes.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'lazaroguimaraes.herokuapp.com',
+                 'lazaroguimaraes.com', 'www.lazaroguimaraes.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog', 
+    'blog',
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',
     'storages',
-    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +129,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap' 
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -144,4 +143,3 @@ AZURE_ACCOUNT_NAME = "70032"
 AZURE_CUSTOM_DOMAIN = f'teiajuridicastorage.blob.core.windows.net'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'teiajuridica.custom_azure_storage_backends.AzureMediaStorage'
-
