@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@y=622nooaqyqd%+ad7u1!&-(l^=$@v6wt#e8yt1-^@i@#zjx!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1', 'lazaroguimaraes.herokuapp.com',
                  'lazaroguimaraes.com', 'www.lazaroguimaraes.com']
 
