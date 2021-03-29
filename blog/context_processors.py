@@ -3,7 +3,7 @@ from . import models
 
 
 def base_context(request):
-    artigos_ultimos = models.Artigo.objects.filter(status='published')[:4]
+    artigos_ultimos = models.Artigo.objects.filter(status='published')[:6]
     artigos = models.Artigo.objects.filter(status='published')
     artigo_destaque = models.Artigo.objects.filter(destaque=True)
     return {
