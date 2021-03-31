@@ -38,22 +38,14 @@
     <div class="col-md-6">
       
       <div class="row g-2 border rounded flex-md-row mb-4 shadow-sm h-md-250 position-static">
-        <div class="col p-4 d-flex flex-column position-static">
+        <div class="col p-2 d-flex flex-column position-static">
           <!-- {% if i.topicos  %}
           <strong class="d-inline-block mb-2 text-primary">{{i.topicos}}</strong>
           {% endif %} -->
-          <h3 class="mb-1">{{i.titulo}}</h3>
+          <h3 class="mb-o">{{i.titulo}}</h3>
           <div class="mb-1 text-muted">{{i.submitted}} por {{ i.author.get_full_name }}</div>
           <p class="card-text mb-auto">{{ i.texto|safe|truncatechars:150 }}</p>
           <a href="{{ i.get_absolute_url }}" class="stretched-link">Continue lendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"/>
-             <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
-          
-          </svg>      
         </div>
       </div>
       
