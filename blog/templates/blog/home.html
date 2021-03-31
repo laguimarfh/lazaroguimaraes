@@ -44,7 +44,7 @@
           {% endif %} -->
           <h3 class="mb-o">{{i.titulo}}</h3>
           <div class="mb-1 text-muted">{{i.submitted}} por {{ i.author.get_full_name }}</div>
-          <p class="card-text mb-auto">{{ i.texto|safe|truncatechars:150 }}</p>
+          <p class="card-text mb-2">{{ i.texto|safe|truncatechars:150 }}</p>
           <a href="{{ i.get_absolute_url }}" class="stretched-link">Continue lendo</a>
         </div>
       </div>
