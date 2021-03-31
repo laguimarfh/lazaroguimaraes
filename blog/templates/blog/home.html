@@ -37,14 +37,14 @@
     {% if not i.destaque %}
     <div class="col-md-6">
       
-      <div class="row g-2 border rounded flex-md-row mb-4 shadow-sm h-md-250 position-static">
+      <div class="row g-1 border rounded flex-md-row mb-3 shadow-sm h-md-250 position-static">
         <div class="col p-2 d-flex flex-column position-static">
           <!-- {% if i.topicos  %}
           <strong class="d-inline-block mb-2 text-primary">{{i.topicos}}</strong>
           {% endif %} -->
           <h3 class="mb-o">{{i.titulo}}</h3>
           <div class="mb-1 text-muted">{{i.submitted}} por {{ i.author.get_full_name }}</div>
-          <p class="card-text mb-2">{{ i.texto|safe|truncatechars:150 }}</p>
+          <p class="card-text mb-2">{{ i.texto|safe|truncatechars:200 }}</p>
           <a href="{{ i.get_absolute_url }}" class="stretched-link">Continue lendo</a>
         </div>
       </div>
